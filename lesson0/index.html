@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        body {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            width: 200px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .xxx {
+            border: 1px solid cornflowerblue;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<video id="videoplayer" src=""></video>
+<script>
+
+
+    // let products = [
+    //     {
+    //         title: 'milk',
+    //         price: 22,
+    //         image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+    //     },
+    //     {
+    //         title: 'juice',
+    //         price: 27,
+    //         image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+    //     },
+    //     {
+    //         title: 'tomato',
+    //         price: 47,
+    //         image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+    //     },
+    //     {
+    //         title: 'tea',
+    //         price: 15,
+    //         image: 'https://images.ctfassets.net/e8bhhtr91vp3/u57hlD2mehS7ea03vStqA/7cf1b42f85ac8c6ca43711c7c52a78ec/PNG-LPT_100ct_Plunge_2022_5000x5000.webp'
+    //     }, {
+    //         title: 'milk',
+    //         price: 22,
+    //         image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+    //     },
+    //     {
+    //         title: 'juice',
+    //         price: 27,
+    //         image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+    //     },
+    //     {
+    //         title: 'tomato',
+    //         price: 47,
+    //         image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+    //     },
+    //     {
+    //         title: 'tea',
+    //         price: 15,
+    //         image: 'https://images.ctfassets.net/e8bhhtr91vp3/u57hlD2mehS7ea03vStqA/7cf1b42f85ac8c6ca43711c7c52a78ec/PNG-LPT_100ct_Plunge_2022_5000x5000.webp'
+    //     }, {
+    //         title: 'milk',
+    //         price: 22,
+    //         image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+    //     },
+    //     {
+    //         title: 'juice',
+    //         price: 27,
+    //         image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+    //     },
+    //     {
+    //         title: 'tomato',
+    //         price: 47,
+    //         image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+    //     },
+    //     {
+    //         title: 'tea',
+    //         price: 15,
+    //         image: 'https://images.ctfassets.net/e8bhhtr91vp3/u57hlD2mehS7ea03vStqA/7cf1b42f85ac8c6ca43711c7c52a78ec/PNG-LPT_100ct_Plunge_2022_5000x5000.webp'
+    //     }, {
+    //         title: 'milk',
+    //         price: 22,
+    //         image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+    //     },
+    //     {
+    //         title: 'juice',
+    //         price: 27,
+    //         image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+    //     },
+    //     {
+    //         title: 'tomato',
+    //         price: 47,
+    //         image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+    //     },
+    //     {
+    //         title: 'tea',
+    //         price: 15,
+    //         image: 'https://images.ctfassets.net/e8bhhtr91vp3/u57hlD2mehS7ea03vStqA/7cf1b42f85ac8c6ca43711c7c52a78ec/PNG-LPT_100ct_Plunge_2022_5000x5000.webp'
+    //     }, {
+    //         title: 'milk',
+    //         price: 22,
+    //         image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+    //     },
+    //     {
+    //         title: 'juice',
+    //         price: 27,
+    //         image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+    //     },
+    //     {
+    //         title: 'tomato',
+    //         price: 47,
+    //         image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+    //     },
+    //     {
+    //         title: 'tea',
+    //         price: 15,
+    //         image: 'https://images.ctfassets.net/e8bhhtr91vp3/u57hlD2mehS7ea03vStqA/7cf1b42f85ac8c6ca43711c7c52a78ec/PNG-LPT_100ct_Plunge_2022_5000x5000.webp'
+    //     }, {
+    //         title: 'milk',
+    //         price: 22,
+    //         image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+    //     },
+    //     {
+    //         title: 'juice',
+    //         price: 27,
+    //         image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+    //     },
+    //     {
+    //         title: 'tomato',
+    //         price: 47,
+    //         image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+    //     },
+    //     {
+    //         title: 'tea',
+    //         price: 15,
+    //         image: 'https://images.ctfassets.net/e8bhhtr91vp3/u57hlD2mehS7ea03vStqA/7cf1b42f85ac8c6ca43711c7c52a78ec/PNG-LPT_100ct_Plunge_2022_5000x5000.webp'
+    //     }, {
+    //         title: 'milk',
+    //         price: 22,
+    //         image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+    //     },
+    //     {
+    //         title: 'juice',
+    //         price: 27,
+    //         image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+    //     },
+    //     {
+    //         title: 'tomato',
+    //         price: 47,
+    //         image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+    //     },
+    //     {
+    //         title: 'tea',
+    //         price: 15,
+    //         image: 'https://images.ctfassets.net/e8bhhtr91vp3/u57hlD2mehS7ea03vStqA/7cf1b42f85ac8c6ca43711c7c52a78ec/PNG-LPT_100ct_Plunge_2022_5000x5000.webp'
+    //     },
+    // ];
+    //
+    // for (const product of products) {
+    //     document.write(`<div class="product">
+    //                             <h2>${product.title} ${product.price}</h2>
+    //                             <img src="${product.image}" >
+    //                     </div>`);
+    // }
+
+    // setInterval(() => {
+    //     let productsArray = document.getElementsByClassName('product');
+    //     for (const item of productsArray) {
+    //         item.classList.add('xxx');
+    //     }
+    //
+    // }, 3000);
+
+
+    navigator
+        .mediaDevices
+        .getUserMedia({video: true})
+        .then(stream => {
+            let videoplayer = document.getElementById('videoplayer');
+            videoplayer.srcObject = stream;
+            videoplayer.play();
+        });
+
+
+</script>
+</body>
+</html>
