@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    // let user1 = {id: 1, name: 'vasya', surname: 'pupkin', age: 31};
+    // let user2 = {id: 2, name: 'koly', surname: 'gupkin', age: 33};
+    //
+    // console.log(user1.name);
+    // console.log(user2.surname);
+    //
+    // user1.aka = 'doctor';
+    // console.log(user1);
+
+    // let user = {name: 'kokos'};
+    // user.id = 100500;
+    // user.foobar = 'alpha';
+    // console.log(user);
+
+    let dev = {
+        name: 'anatoliy',
+        age: 31,
+        status: true,
+        surname: 'shevchenko',
+        email: 'asd@asd.com',
+        github: 'GrayHead',
+        login: 'GrayHeadDev',
+        password: '#$%^&FGHJ',
+        phone: '+380671231212',
+        wife: {
+            name: 'anna',
+            surname: 'shevchenko',
+            eyesColor: 'green',
+            hair: 'brown',
+            age: 18,
+            child: {
+                name: 'yurii',
+                surname: 'shevchenko',
+
+            }
+        },
+        skills: [
+            {title: 'js', exp: 12},
+            {title: 'html', exp: 100500},
+            {title: 'java', exp: 11},
+            {title: 'ionic', exp: 7},
+        ]
+
+    }
+
+    console.log(dev.name);
+    console.log(dev.surname);
+    console.log(dev.wife.name);
+    console.log(dev.wife.surname);
+    console.log(dev.wife.child);
+    console.log(dev.wife.child.name);
+    console.log(dev.wife.child.surname);
+    console.log(dev.skills[0]);
+    console.log(dev.skills[0].title);
+    console.log(dev.skills[0].exp);
+    console.log(dev.skills[1]);
+
+
+    // // array
+    // //     index     0     1    2    3   4    5
+    // let recipets = [123, 123, 111, 12, 345, 54];
+    // console.log(recipets);
+    // console.log(recipets[0]);
+    // console.log(recipets[2]);
+    //
+    // let catchPhrases = [
+    //     {phrase: 'doope', counter: 999},
+    //     {phrase: 'auch', counter: 777},
+    //     {phrase: 'oooohhh', counter: 100500}
+    // ];
+    // console.log(catchPhrases);
+    // // let phrase1 = catchPhrases[0];
+    //
+    // console.log(catchPhrases[0].phrase);
+    // console.log(catchPhrases[0].counter);
+
+
+</script>
+
+</body>
+</html>

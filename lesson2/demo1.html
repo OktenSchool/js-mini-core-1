@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+</head>
+<body>
+<script>
+    fetch('https://dummyjson.com/products')
+        .then(res => res.json())
+        .then(value => {
+            let products = value.products;
+            console.log(products);
+
+            for (const product of products) {
+                document.write(`
+                 <div class="target">
+                    <h2>${product.title} ${product.price} USD</h2>
+                    <p>${product.description}</p>
+                    <img src="${product.images[0]}" alt="" style="width: 200px;">
+                 </div>
+
+                `);
+            }
+
+        });
+</script>
+
+
+</body>
+</html>
