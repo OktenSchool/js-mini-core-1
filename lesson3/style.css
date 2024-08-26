@@ -1,0 +1,12 @@
+.target{
+    background: silver;
+    width: 500px;
+    text-align: justify;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.target>p{
+    padding-left: 15px;
+    border-left: 2px solid cornflowerblue;
+}
