@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #recipes > div > img {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="recipes"></div>
+
+<script>
+
+    let recipesBox = document.getElementById('recipes');
+
+    fetch('https://dummyjson.com/recipes')
+        .then(response => response.json())
+        .then(result => { // start
+
+
+            let recipes = result.recipes;
+            for (const recipe of recipes) {
+                let div = document.createElement('div');
+                let h3 = document.createElement('h3')
+
+                h3.innerText = `${recipe.id} ${recipe.name}`;
+
+                let img = document.createElement('img');
+                img.src = recipe.image;
+                let ingredients = recipe.ingredients;
+                let ingredientsList = document.createElement('ul');
+
+                for (const ingredient of ingredients) {
+                    let li = document.createElement('li');
+                    li.innerText = ingredient;
+                    ingredientsList.appendChild(li);
+                }
+
+
+                div.appendChild(h3);
+                div.appendChild(ingredientsList);
+                div.appendChild(img);
+                recipesBox.appendChild(div);
+
+            }
+
+
+        }) // end
+
+</script>
+
+</body>
+</html>
